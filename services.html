@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | MFD TECH</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="service.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
+  <style>
+    /* Animation for fading images */
+    .page-service-image-showcase img {
+      opacity: 0;
+      transition: opacity 0.8s;
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      z-index: 1;
+    }
+    .page-service-image-showcase {
+      position: relative;
+      min-height: 220px;
+      max-height: 260px;
+    }
+    .page-service-image-showcase img.active {
+      opacity: 1;
+      z-index: 2;
+    }
+    @media (max-width: 900px) {
+      .page-service-image-showcase {
+        min-height: 180px;
+        max-height: 220px;
+      }
+    }
+    @media (max-width: 600px) {
+      .page-service-image-showcase {
+        min-height: 120px;
+        max-height: 150px;
+      }
+    }
+  </style>
+</head>
+<html class="page-body">
+    <header class="navbar">
+    <div class="logo">
+      <!-- <img src="logo.png" alt="MFD TECH LOGO"> -->
+      <span>MFD TECH</span>
+    </div>
+    <!-- Hamburger Button (mobile only) -->
+    <button class="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Slide-in Mobile Nav -->
+    <nav class="mobile-nav">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#">Our Services</a>
+        <div class="dropdown-content">
+          <a href="#">Web Development</a>
+          <a href="#">Copy writing</a>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Logo Design</a>
+          <a href="#">Flyer</a>
+          <div class="dropdown">
+            <a href="#">Corporate Branding</a>
+            <div class="dropdown-content">
+              <a href="">Large format printing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="">Testimonial</a>
+      <a href="#">About Us</a>
+      <a href="#">Portfolio</a>
+      <button class="quote-btn mobile-contact">Contact Us</button>
+    </nav>
+    <!-- Overlay for mobile nav -->
+    <div class="mobile-nav-overlay"></div>
+    <!-- Desktop Nav -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <a href="#">Our Services</a>
+        <div class="dropdown-content">
+          <a href="#">Web Development</a>
+          <a href="#">Copy writing</a>
+          <a href="#">Digital Marketing</a>
+          <a href="#">Logo Design</a>
+          <a href="#">Flyer</a>
+          <div class="dropdown">
+            <a href="#">Corporate Branding</a>
+            <div class="dropdown-content">
+              <a href="">Large format printing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="">Testimonial</a>
+      <a href="#">About Us</a>
+      <a href="#">Portfolio</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="quote-btn">Contact Us</button>
+    </div>
+  </header>  
+  <section class="page-services-hero">
+    <h1>Our Services</h1>
+    <p>Creative digital solutions to elevate your brand and grow your business.</p>
+  </section>
+
+  <!-- Web Development Section -->
+  <section class="page-service-section page-web-dev">
+    <div class="page-service-content">
+      <div class="page-service-image-showcase" data-images="webdev">
+        <img src="./images/web image1.webp" alt="Web Development Project" class="active">
+        <img src="./images/web image2.webp" alt="Web Development Project 2">
+        <img src="./images/web image3.webp" alt="Web Development Project 3">
+        <img src="./images/web image4.webp" alt="">
+      </div>
+      <div class="page-service-text">
+        <h2>Web Development</h2>
+        <p>Modern, responsive websites built for performance, user experience, and your business goals. We turn your ideas into digital reality.</p>
+        <ul>
+          <li>Business Websites</li>
+          <li>Landing Pages</li>
+          <li>eCommerce Solutions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branding Section -->
+  <section class="page-service-section page-branding">
+    <div class="page-service-content reverse">
+      <div class="page-service-image-showcase" data-images="branding">
+        <img src="./images/custom-high-quality-branded-cotton-face-towel-customized-embroidered-face-towel-print-in-lagos-nigeria.jfif" alt="Branding Project" class="active">
+        <img src="./images/Custom Gazebo Canopy Tent.jpg" alt="Branding Project 2">
+        <img src="./images/clothing hand tag.jfif" alt="">
+        <img src="./images/Custom Cork bottom Coffee mug.jfif" alt="">
+        <img src="./images/custom-backlit-illuminated-signage-outdoor-office-company-logo-business-illuminated-signage-with-light-in-lagos-nigeria.jfif" alt="">
+        <img src="./images/Logo Branded Polo T-Shirt.jfif" alt="">
+        <img src="./images/Car Branding.jpg" alt="Branding Project 3">
+      </div>
+      <div class="page-service-text">
+        <h2>Branding</h2>
+        <p>We craft memorable brands, from strategy and messaging to visual identity and guidelines. Make your business unforgettable.</p>
+        <ul>
+          <li>Custom Pen</li>
+          <li>Company Profile</li>
+          <li>Brand Guidelines</li>
+          <li>T-Shirt & Embroidery</li>
+          <li>Car Branding</li>
+          <li>Box Branding</li>
+          <li>illumibated signage</li>
+          <li>face towel....etc</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Design Section -->
+  <section class="page-service-section page-logo">
+    <div class="page-service-content">
+      <div class="page-service-image-showcase" data-images="logo">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="Logo Design Project" class="active">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Logo Design Project 2">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80" alt="Logo Design Project 3">
+      </div>
+      <div class="page-service-text">
+        <h2>Logo Design</h2>
+        <p>Unique, professional logos that capture your brand’s essence and make a lasting impression everywhere your business appears.</p>
+        <ul>
+          <li>Custom Logo Concepts</li>
+          <li>Logo Redesign</li>
+          <li>Brand Marks & Icons</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flyers Design Section -->
+  <section class="page-service-section page-flyers">
+    <div class="page-service-content reverse">
+      <div class="page-service-image-showcase" data-images="flyers">
+        <img src="./images/A5 Invoice&Receipt Booklet.jfif" alt="Flyers Design Project" class="active">
+        <img src="./images/Custom Business Card.jfif" alt="Flyers Design Project 2">
+        <img src="./images/Custom PVC Bunting Flag.jfif" alt="Flyers Design Project 3">
+        <img src="./images/Custom Table Tag Reservation Card.jfif" alt="">
+        <img src="./images/Portrait Event Menu Card.jpg" alt="">
+        <img src="./images/Product Label Sticker.jfif" alt="">
+        <img src="./images/Wedding Programme (Magazine Size).jpg" alt="">
+        <img src="./images/Square Burial.jpg" alt="">
+      </div>
+      <div class="page-service-text">
+        <h2>Flyers Design</h2>
+        <p>Eye-catching flyers and promotional materials designed to engage, inform, and convert your audience both online and offline.</p>
+        <ul>
+          <li>A5 Invoice&Recipt Booklet</li>
+          <li>Custom Business Card</li>
+          <li>Custom PVC Bunting Flag</li>
+          <li>Produt Label Sticker</li>
+          <li>Portait Event Menu Card</li>
+          <li>Custom Table Tag Reservation Card</li>
+          <li>Wedding Programme (Magazine Size)....etc</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Copywriting Section -->
+  <section class="page-service-section page-copywriting">
+    <div class="page-service-content">
+      <div class="page-service-image-showcase" data-images="copywriting">
+        <img src="./images/cop1.webp" alt="Copywriting Project" class="active">
+        <img src="./images/cop3.webp" alt="Copywriting Project 2">
+        <img src="./images/cop2.png" alt="Copywriting Project 3">
+      </div>
+      <div class="page-service-text">
+        <h2>Copywriting</h2>
+        <p>Persuasive, creative copy for websites, ads, and campaigns that connects with your audience and drives action.</p>
+        <ul>
+          <li>Website Content</li>
+          <li>Ad Copy</li>
+          <li>Product Descriptions</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Marketing Section -->
+  <section class="page-service-section page-digital-marketing">
+    <div class="page-service-content reverse">
+      <div class="page-service-image-showcase" data-images="digitalmarketing">
+        <img src="./images/dig1.jfif" alt="Digital Marketing Project" class="active">
+        <img src="./images/dig3.png" alt="Digital Marketing Project 2">
+        <img src="./images/dig2.jfif" alt="Digital Marketing Project 3">
+      </div>
+      <div class="page-service-text">
+        <h2>Digital Marketing</h2>
+        <p>Results-driven digital marketing strategies including SEO, social media, and online ads to grow your reach and boost sales.</p>
+        <ul>
+          <li>SEO Optimization</li>
+          <li>Social Media Campaigns</li>
+          <li>Online Advertising</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Slideshow for each service image showcase
+    document.querySelectorAll('.page-service-image-showcase').forEach(function(showcase) {
+      const imgs = showcase.querySelectorAll('img');
+      let idx = 0;
+      setInterval(() => {
+        imgs[idx].classList.remove('active');
+        idx = (idx + 1) % imgs.length;
+        imgs[idx].classList.add('active');
+      }, 2500);
+    });
+  </script>
+  <script src="script.js"></script>
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Company Info -->
+    <div class="footer-section company-info">
+      <img src="logo.png" alt="SDDTIF Logo" class="logo" />
+      <p>
+        We believe that technology should be a driver of growth, not a barrier, and we are here to ensure that your IT infrastructure supports your business goals.
+      </p>
+      <button class="about-btn">About us</button>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section newsletter">
+      <h3>Newsletter</h3>
+      <p>Subscribe our newsletter to get our latest update & news.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+
+    <!-- Official Info -->
+    <div class="footer-section contact-info">
+      <h3>Official info:</h3>
+      <ul>
+        <li><i class="fas fa-phone"></i> +234 802 2252 949</li>
+        <li><i class="fas fa-phone"></i> +234 708 372 5950</li>
+        <li><i class="fas fa-envelope"></i> info@sddtiftech.com</li>
+        <li><i class="fas fa-envelope"></i> enquiry@sddtiftech.com</li>
+      </ul>
+      <p><strong>Open Hours:</strong><br>Mon – Sun: 8 am – 8 pm</p>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-section social-media">
+      <h3>Follow Us</h3>
+      <div class="social-media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2024 Sddtif Tech. All rights reserved.</p>
+  </div>
+</footer>
+</html>
+</body>
