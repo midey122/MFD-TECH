@@ -102,54 +102,51 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Testimonials slider drag-to-scroll (optional)
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.testimonials-slider');
-  if (!slider) return;
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonials = document.querySelectorAll(".testimonial-item");
+  const prevBtn = document.querySelector(".arrow-t.prev");
+  const nextBtn = document.querySelector(".arrow-t.next");
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2;
-    slider.scrollLeft = scrollLeft - walk;
-  });
+  let currentIndex = 0;
 
-  // Auto-scroll testimonials
-  let autoScrollInterval = setInterval(function() {
-    slider.scrollLeft += 350;
-    if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-      slider.scrollLeft = 0;
-    }
-  }, 5000);
-
-  slider.addEventListener('mouseover', () => clearInterval(autoScrollInterval));
-  slider.addEventListener('mouseout', () => {
-    autoScrollInterval = setInterval(function() {
-      slider.scrollLeft += 350;
-      if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-        slider.scrollLeft = 0;
+  // Function to show testimonial
+  function showTestimonial(index) {
+    testimonials.forEach((item, i) => {
+      item.classList.remove("active");
+      if (i === index) {
+        item.classList.add("active");
       }
-    }, 5000);
+    });
+  }
+
+  // Next button
+  nextBtn.addEventListener("click", () => {
+    currentIndex++;
+    if (currentIndex >= testimonials.length) {
+      currentIndex = 0; // loop back to first
+    }
+    showTestimonial(currentIndex);
   });
+
+  // Prev button
+  prevBtn.addEventListener("click", () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = testimonials.length - 1; // loop back to last
+    }
+    showTestimonial(currentIndex);
+  });
+
+  // Auto-slide (optional)
+  setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= testimonials.length) {
+      currentIndex = 0;
+    }
+    showTestimonial(currentIndex);
+  }, 6000); // every 6 seconds
 });
+
 
 // Newsletter form submit
 document.addEventListener('DOMContentLoaded', function() {

@@ -458,7 +458,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: 70vh;
     padding-top: 5rem;
     padding-bottom: 3rem;
   }
@@ -639,7 +639,7 @@ body {
   .slide.active {
     align-items: flex-end;
     justify-content: center;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
   }
 }
 
@@ -791,11 +791,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .features {
-    flex-direction: column;
-    gap: 20px;
-  }
+    .features {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
 .innovating-section {
     padding: 60px 8%;
@@ -877,7 +876,7 @@ body {
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1200px; /* prevent content from stretching too wide */
   margin: 0 auto;
 }
 
@@ -907,13 +906,13 @@ body {
   font-weight: bold;
 }
 
-/* Grid Layout */
+/* ================== GRID LAYOUT ================== */
 .services-grids {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row on large screens */
   gap: 2rem;
-  max-width: 100%;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .service-cards {
@@ -925,7 +924,8 @@ body {
   transition: transform 0.3s ease;
   position: relative;
   border-top-left-radius: 100px;
-  width:250px;
+  max-width: 250px; /* prevents stretching */
+  margin: 0 auto;
 }
 
 .service-cards:hover {
@@ -957,6 +957,14 @@ body {
 
 /* ================== RESPONSIVENESS ================== */
 
+/* Large Laptops (max 1200px) */
+@media (max-width: 1200px) {
+  .services-grids {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 1.8rem;
+  }
+}
+
 /* Tablets */
 @media (max-width: 992px) {
   .services-grids {
@@ -974,14 +982,58 @@ body {
 
   .service-cards {
     padding: 20px 15px;
+    max-width: 100%; /* allow full width */
   }
 
   .service-cards h3 {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .service-cards p {
     font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+  .sub-title {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+}
+/* ================== RESPONSIVENESS ================== */
+
+/* Desktop screens (1200px and up) */
+@media (min-width: 1200px) {
+  .services-grids {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row for large screens */
+  }
+}
+
+/* Tablets and medium desktops (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .services-grids {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .services-grids {
+    grid-template-columns: 1fr; /* 1 card per row for mobile */
+    gap: 1.2rem;
+  }
+
+  .service-cards {
+    width: 100%; /* Make cards full width on mobile */
+    max-width: 300px; /* Optional: limit card width for better aesthetics on very small screens */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* Choose Us Section */
@@ -1099,8 +1151,8 @@ body {
   }
 
   .tabs ul {
-    gap: 15px;
-    justify-content: flex-start; /* align left for scroll */
+    gap: 30px;
+    justify-content: center; /* align left for scroll */
   }
 
   .tabs {
@@ -1125,7 +1177,7 @@ body {
   }
 
   .tabs ul {
-    gap: 12px;
+    gap: 20px;
   }
 }
 
@@ -1573,7 +1625,10 @@ h2 {
   font-size: 14px;
   color: #888;
 }
-
+@media (max-width: 768px){
+.floating-avatar{
+  display: none;
+}}
 .footer {
   background: linear-gradient(135deg, #0c0c36, #0a0a2c);
   color: #fff;
@@ -1667,4 +1722,147 @@ h2 {
   padding-top: 20px;
   font-size: 14px;
   color: #bbb;
+}
+
+.page-body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f6f8fa;
+  margin: 0;
+  color: #222;
+}
+
+.page-services-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  background: linear-gradient(90deg, #004aad 60%, #00c6fb 100%);
+  color: #fff;
+}
+.page-services-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+.page-services-hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.page-service-section {
+  max-width: 1100px;
+  margin: 3rem auto 3rem auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+  padding: 0;
+  border-top: 0;
+  border-bottom: 2px solid #eaf1fb;
+  transition: none;
+}
+.page-service-section:last-child {
+  border-bottom: none;
+}
+.page-service-content {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+.page-service-content.reverse {
+  flex-direction: row-reverse;
+}
+.page-service-image-showcase {
+  flex: 1 1 340px;
+  min-width: 220px;
+  max-width: 420px;
+  background: #eaf1fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 2rem;
+  box-shadow: 0 2px 12px rgba(0,74,173,0.07);
+}
+.page-service-image-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 220px;
+  max-height: 260px;
+  display: block;
+  border: none;
+  border-radius: 18px;
+}
+
+.page-service-text {
+  flex: 2 1 400px;
+  padding: 2.5rem 2.5rem 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+}
+.page-service-text h2 {
+  margin: 0 0 0.6rem 0;
+  font-size: 2rem;
+  color: #03224b;
+  letter-spacing: 1px;
+}
+.page-service-text p {
+  font-size: 1.13rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.page-service-text ul {
+  padding-left: 1.1rem;
+  margin: 0;
+  color: #0071c2;
+  font-size: 1.05rem;
+}
+.page-service-text ul li {
+  margin-bottom: 0.3rem;
+  list-style: disc;
+}
+
+/* Unique color accents for each section */
+.page-web-dev .page-service-text h2 { color: #004aad; }
+.page-branding .page-service-text h2 { color: #004aad; }
+.page-logo .page-service-text h2 { color: #004aad; }
+.page-flyers .page-service-text h2 { color: #004aad }
+.page-copywriting .page-service-text h2 { color: #004aad; }
+.page-digital-marketing .page-service-text h2 { color: #004aad; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .page-service-content,
+  .page-service-content.reverse {
+    flex-direction: column;
+  }
+  .page-service-image-showcase {
+    max-width: 100%;
+    margin: 1.2rem 1rem 0.5rem 1rem;
+    min-height: 180px;
+    max-height: 280px;
+  }
+  .page-service-text {
+    padding: 1.5rem 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .page-service-section {
+    margin: 1.2rem 0.2rem;
+  }
+  .page-service-text h2 {
+    font-size: 1.2rem;
+  }
+  .page-service-image-showcase img {
+    min-height: 120px;
+    max-height: 170px;
+  }
 }
