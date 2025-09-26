@@ -29,7 +29,7 @@ body {
   align-items: center;
   font-size: 1.4rem;
   font-weight: bold;
-  color: #004aad;
+  color: #1D2B4D;
 }
 
 .logo img {
@@ -71,7 +71,7 @@ body {
 }
 
 .quote-btn {
-  background: #004aad;
+  background:#1A75FF;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -196,7 +196,7 @@ body {
   display: block;
   height: 4px;
   width: 28px;
-  background: #004aad;
+  background: #1A75FF;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -430,7 +430,7 @@ body {
 /* Extra Small Devices */
 @media (max-width: 480px) {
   .hero-content h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         width: 90%;
     }
 
@@ -1720,7 +1720,7 @@ h2 {
   flex-direction: row-reverse;
 }
 .page-service-image-showcase {
-  flex: 1 1 340px;
+  /* flex: 1 1 340px; */
   min-width: 220px;
   max-width: 420px;
   background: #eaf1fb;
