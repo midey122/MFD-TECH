@@ -323,3 +323,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ...rest of your JS remains unchanged...
+document.addEventListener("DOMContentLoaded", () => {
+  const showcase = document.querySelector(".page-service-image-showcase");
+  const images = showcase.querySelectorAll("img");
+  let index = 0;
+
+  // Hide all except the first
+  images.forEach((img, i) => {
+    img.style.display = i === 0 ? "block" : "none";
+  });
+
+  function showSlide(i) {
+    index = (i + images.length) % images.length;
+
+    images.forEach((img, idx) => {
+      img.style.display = idx === index ? "block" : "none";
+    });
+  }
+
+  // Auto-slide every 3s (remove if you only want manual)
+  setInterval(() => showSlide(index + 1), 3000);
+});
