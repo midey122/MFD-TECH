@@ -304,7 +304,7 @@ body {
 /* Hero Section */
 /* Hero Section */
 .hero {
- padding: 5%;
+ padding-inline: 5%;
  background-color: white;
  margin-top: 0;
  padding: auto;
@@ -381,7 +381,7 @@ body {
   }
 
   .description {
-    margin: 0 auto 1.5rem;
+    /* margin: 0 auto 1.5rem; */
     max-width: 90%;
   }
 }
@@ -398,7 +398,7 @@ body {
   .hero-content {
     text-align: left;
 
-    padding: 2rem 1.5rem;
+    /* padding: 2rem 1.5rem; */
     max-width: 100%;
   }
 
@@ -430,8 +430,9 @@ body {
 /* Extra Small Devices */
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 1.6rem;
-  }
+        font-size: 1.9rem;
+        width: 90%;
+    }
 
   .description {
     font-size: 0.9rem;
@@ -721,7 +722,7 @@ body {
 @media (max-width: 768px) {
   .innovating-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
     .features {
         flex-direction: row;
@@ -922,7 +923,7 @@ body {
   }
 
   .service-cards {
-    padding: 20px 15px;
+    padding-top:18%;
     max-width: 100%; /* allow full width */
   }
 
