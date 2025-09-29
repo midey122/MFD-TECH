@@ -71,7 +71,7 @@ body {
 }
 
 .quote-btn {
-  background:#1A75FF;
+  background:#1D2B4D;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -196,7 +196,7 @@ body {
   display: block;
   height: 4px;
   width: 28px;
-  background: #1A75FF;
+  background: #1D2B4D;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
@@ -229,6 +229,11 @@ body {
   z-index: 2000;
   gap: 18px;
   overflow-y: auto;
+  text-decoration: none;
+}
+.mobile-nav a {
+  text-decoration: none;
+  color: black;
 }
 .mobile-nav .dropdown-content {
   position: static;
@@ -314,7 +319,8 @@ body {
 /* Tagline */
 .tagline {
   background: white;
-  color: #004aad;
+  color:  #040c79;
+
   display: inline-block;
   padding: 6px 16px;
   border-radius: 25px;
@@ -332,7 +338,7 @@ body {
 }
 
 .hero-content h1 span {
-  color: #040c79;
+  color: #004aad;
 }
 
 /* Description */
@@ -422,9 +428,7 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .slide{
-    /* height: 80vh; */
-  }
+
 
 }
 /* Extra Small Devices */
@@ -442,14 +446,10 @@ body {
     font-size: 0.85rem;
     padding: 0.7rem 1rem;
   }
-  .slide{
-    /* height: 70vh; */
-  }
+
 }
 @media (max-width: 350px) {
-  .slide{
-    /* height: 80vh; */
-  }
+ 
 }
 
 /* ... keep previous CSS ... */
@@ -639,7 +639,8 @@ body {
 .tagline {
   display: inline-block;
   background: white;
-  color: #6a00ff;
+  color:  #040c79;
+;
   font-weight: 600;
   padding: 6px 14px;
   border-radius: 20px;
@@ -705,7 +706,7 @@ body {
 .contact-btn {
  display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(90deg, #004aad, #0073ff);
   color: #fff;
   border-radius: 30px;
   font-weight: 600;
@@ -835,7 +836,7 @@ body {
 }
 
 .section-header h2 span {
-  color: #4e00ff;
+  color: #004aad;
   font-weight: bold;
 }
 
@@ -868,7 +869,8 @@ body {
 }
 
 .service-cards .icon {
-  background: linear-gradient(135deg, #7b00ff, #4e00ff);
+   background: linear-gradient(90deg, #004aad, #0073ff);
+
   color: white;
   padding: 30px;
   font-size: 24px;
@@ -987,7 +989,7 @@ body {
 
 .top-badge {
   background: #f4f4ff;
-  color: #4a00e0;
+ color: #004aad;
   padding: 10px 20px;
   display: inline-block;
   border-radius: 30px;
@@ -1004,7 +1006,7 @@ body {
 }
 
 .highlight {
-  color: #6A00FF;
+ color: #004aad;
 }
 
 .subtext {
@@ -1046,7 +1048,7 @@ body {
 }
 
 .tabs .active {
-  color: #4a00e0;
+color: #004aad;
 }
 
 .tabs .active::after {
@@ -1054,7 +1056,7 @@ body {
   display: block;
   width: 100%;
   height: 4px;
-  background: #4a00e0;
+  background:  #004aad;;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1146,7 +1148,8 @@ body {
 }
 
 .tagline {
-  color: #4a00e0;
+  color:  #040c79;
+
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -1166,7 +1169,9 @@ body {
 .about-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+     background: linear-gradient(90deg, #004aad, #0073ff);
+
+
   color: #fff;
   border-radius: 30px;
   font-weight: 600;
@@ -1611,7 +1616,7 @@ h2 {
 }
 
 .about-btn {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(90deg, #004aad, #0073ff);
   border: none;
   color: white;
   padding: 10px 20px;
