@@ -302,7 +302,7 @@ body {
   padding-inline: 5%;
   background-color: white;
   margin-top: 0;
-  padding: auto;
+  padding-bottom: 20px;
 }
 
 /* Tagline */
@@ -761,6 +761,7 @@ body {
 }
 
 .section-header {
+  margin-top: 20px;
   text-align: center;
   margin-bottom: 40px;
 }
@@ -924,6 +925,7 @@ body {
   text-align: center;
   padding: 80px 20px 30px;
   position: relative;
+  background-color: #f9f9f9;
 }
 
 .top-badge {
@@ -964,10 +966,11 @@ body {
 .tabs {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  margin: 40px 0 30px;
+  /* margin: 40px 0 30px; */
   padding: 10px 0;
   text-align: center;
   overflow-x: auto;
+  background: #f9f9f9;
 }
 
 .tabs ul {
@@ -1071,6 +1074,7 @@ body {
   flex-wrap: wrap;
   padding: 50px 20px;
   position: relative;
+  background-color: #f9f9f9;
 }
 
 .image-container img {
@@ -1775,7 +1779,7 @@ h2 {
 /* About Section */
 .about-section {
   padding: 80px 20px;
-  background-color: white;
+  background-color: #f9f9f9;
 }
 
 .about-container {
@@ -1785,6 +1789,7 @@ h2 {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+background-color: #f9f9f9;
 }
 
 .about-text {
@@ -1842,7 +1847,7 @@ h2 {
 /* Projects Section */
 .projects-section {
   padding: 40px 20px;
-  background: white;
+  background: #f9f9f9;
   text-align: center;
 }
 
