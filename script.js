@@ -368,3 +368,47 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+
+
+  
+    document.addEventListener('DOMContentLoaded', () => {
+        const skillBars = document.querySelectorAll('.progress-bar-line');
+
+        /**
+         * The Intersection Observer callback function.
+         * @param {IntersectionObserverEntry[]} entries - An array of observed elements' entries.
+         * @param {IntersectionObserver} observer - The observer instance.
+         */
+        const animateSkills = (entries, observer) => {
+            entries.forEach(entry => {
+                // Check if the element is currently visible in the viewport
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    // Get the target percentage from the data attribute
+                    const level = bar.getAttribute('data-skill-level');
+                    
+                    // Set the width to trigger the CSS transition
+                    bar.style.width = `${level}%`;
+                    
+                    // Stop observing after animation is triggered
+                    observer.unobserve(bar);
+                }
+            });
+        };
+
+        // Options for the observer: 0.1 means trigger when 10% of the element is visible
+        const observerOptions = {
+            root: null, // relative to the viewport
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        // Create the observer instance
+        const observer = new IntersectionObserver(animateSkills, observerOptions);
+
+        // Start observing each skill bar
+        skillBars.forEach(bar => {
+            observer.observe(bar);
+        });
+    });
+

@@ -168,60 +168,87 @@
 </section>
 <!-- Skills Section --><!-- Skills Section -->
 <section class="services-section">
-  <div class="container">
-    <div class="section-header">
-      <p class="sub-title">~ My Services ~</p>
-      <h2>What I Offer </h2>
+<div class="skill-container">
+    <!-- Header -->
+    <h2 class="skill-title">MY SKILLS</h2>
+
+    <!-- Grid for 2-column layout (default 1 col, md: 2 cols via Tailwind) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        
+        <!-- Skill Item 1: HTML -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-space-between mb-1">
+                <span class="text-sm font-semibold color-html">HTML</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="90">90%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="90"></div>
+            </div>
+        </div>
+        
+        <!-- Skill Item 2: CSS -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold color-css">CSS</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="90">90%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="90"></div>
+            </div>
+        </div>
+
+        <!-- Skill Item 3: JavaScript -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold color-js">JavaScript</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="85">85%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="95"></div>
+            </div>
+        </div>
+
+        <!-- Skill Item 4: React -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold color-react">React</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="75">75%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="85"></div>
+            </div>
+        </div>
+
+        <!-- Skill Item 5: Node.js -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold color-nodejs">Node.js</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="80">70%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="80"></div>
+            </div>
+        </div>
+
+        <!-- Skill Item 6: MongoDB -->
+        <div class="skill-item-wrapper">
+            <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold color-mongodb">MongoDB</span>
+                <span class="text-sm font-medium text-gray-600 skill-percentage" data-target="75">75%</span>
+            </div>
+            <div class="progress-bar-track">
+                <div class="progress-bar-line" data-skill-level="75"></div>
+            </div>
+        </div>
+        
     </div>
+</div>
 
-    <div class="services-grids">
-      
-      <!-- Web Development -->
-      <div class="service-cards">
-        <div class="icon">
-          <i class="fas fa-laptop-code"></i>
-        </div>
-        <h3>Web Development</h3>
-        <p>
-          I build responsive and modern websites that focus on speed, functionality, and a seamless user experience.
-        </p>
-      </div>
 
-      <!-- Web Maintenance -->
-      <div class="service-cards">
-        <div class="icon">
-          <i class="fas fa-tools"></i>
-        </div>
-        <h3>Web Maintenance</h3>
-        <p>
-          Regular updates, security checks, and performance optimization to keep your website running smoothly.
-        </p>
-      </div>
 
-      <!-- Logo Design -->
-      <div class="service-cards">
-        <div class="icon">
-          <i class="fas fa-drafting-compass"></i>
-        </div>
-        <h3>Logo Design</h3>
-        <p>
-          Unique and creative logos that capture your brand’s identity and leave a lasting impression.
-        </p>
-      </div>
-
-      <!-- Flyer Design -->
-      <div class="service-cards">
-        <div class="icon">
-          <i class="fas fa-file-pdf"></i>
-        </div>
-        <h3>Flyer Design</h3>
-        <p>
-          Eye-catching flyer designs that communicate your message clearly and attract your target audience.
-        </p>
-      </div>
-
-    </div>
-  </div>
+</section>
+<section>
+  
 </section>
 
 
@@ -267,22 +294,22 @@
 <!-- Projects Section -->
 <section class="projects-section" id="projects">
   <div class="container">
-    <h2 class="section-title"> My Projects</h2>
-    <p class="section-subtitle">Here are some of my featured works with live links and code.</p>
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-subtitle">Explore some of my featured projects — each showcasing my skills in design, development, and problem-solving.</p>
 
     <div class="projects-grid">
-      <!-- Project Card -->
+
+      <!-- Project 1: Tic Tac Toe Game -->
       <div class="project-card">
-        <img src="images/tictak.png" alt="To-Do List Project" class="project-image" />
+        <img src="images/tictak.png" alt="Tic Tac Toe Game" class="project-image" />
         <div class="project-content">
-          <h3>To-Do List App</h3>
-          <p>A simple and efficient to-do list app to manage daily tasks with CRUD functionality.</p>
+          <h3>Tic Tac Toe Game</h3>
+          <p>An interactive and responsive Tic Tac Toe game built for fun and logic practice, featuring a clean interface and smart game logic.</p>
           <hr>
-           <div class="project-links">
+          <div class="project-links">
             <a href="https://tic-tac-toc-nine.vercel.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            <a href="#" target="_blank"> <i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
-         
           <hr>
           <div class="tech-stack">
             <span>HTML</span><span>CSS</span><span>JavaScript</span>
@@ -290,213 +317,110 @@
         </div>
       </div>
 
-      <!-- Project Card -->
+      <!-- Project 2: Quiz Web App -->
       <div class="project-card">
-        <img src="images/quizwebapp.png" alt="Blog Project" class="project-image" />
+        <img src="images/quizwebapp.png" alt="Quiz Web App" class="project-image" />
         <div class="project-content">
-          <h3>Personal Blog</h3>
-          <p>A blogging platform with responsive layouts and dynamic post pages.</p>
+          <h3>Quiz Web App</h3>
+          <p>A dynamic quiz application that allows users to test their knowledge with multiple-choice questions and real-time scoring.</p>
           <hr>
           <div class="project-links">
             <a href="https://quiz-web-app-nu.vercel.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/midey122/QuizWebApp" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
           <hr>
           <div class="tech-stack">
-            <span>Node.js</span><span>Express</span><span>MongoDB</span>
+            <span>EJS</span><span>CSS</span><span>JavaScript</span>
           </div>
-          
         </div>
       </div>
 
-      <!-- Project Card -->
+      <!-- Project 3: Nike E-Commerce Website -->
       <div class="project-card">
-        <img src="images/nike.png" alt="E-Commerce Project" class="project-image" />
+        <img src="images/nike.png" alt="Nike E-Commerce Website" class="project-image" />
         <div class="project-content">
-          <h3>E-Commerce Website</h3>
-          <p>A complete shopping experience with cart, product pages, and authentication.</p>
+          <h3>Nike E-Commerce Website</h3>
+          <p>An elegant and responsive e-commerce platform developed for Nike, featuring product pages, shopping cart functionality, and smooth user experience.</p>
           <hr>
           <div class="project-links">
             <a href="https://nike-elite-shop.vercel.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/midey122/Nike-Elite-Shop" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
           <hr>
           <div class="tech-stack">
-            <span>React</span><span>Node.js</span><span>MongoDB</span>
+            <span>HTML</span><span>React</span><span>JavaScript</span><span>CSS</span>
           </div>
-          
         </div>
       </div>
 
-      <!-- Project Card -->
+      <!-- Project 4: Zirae Chemicals Portfolio -->
       <div class="project-card">
-        <img src="images/portfolio.png" alt="Portfolio Project" class="project-image" />
+        <img src="images/portfolio.png" alt="Zirae Chemicals Portfolio" class="project-image" />
         <div class="project-content">
-          <h3>Portfolio Website</h3>
-          <p>My personal portfolio to showcase skills, projects, and contact information.</p>
+          <h3>Zirae Chemicals Portfolio</h3>
+          <p>A professional portfolio website created for Zirae Chemicals to showcase their brand, services, and company identity with a modern design.</p>
           <hr>
           <div class="project-links">
             <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Live Demo</a>
-            <a href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://github.com/midey122/zirae-chemical" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
           </div>
           <hr>
           <div class="tech-stack">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
           </div>
-          
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
 
 
-<section>
-    <div class="section-header">
-      <p class="sub-title">~ Our Awesome Services ~</p>
-      <h2>We Are Dedicated To Serve You All Time.</h2>
-    </div>
-  <section class="page-service-section page-web-dev">
-    <div class="page-service-content">
-      <div class="page-service-image-showcase" data-images="webdev">
-        <img src="./images/web image1.webp" alt="Web Development Project" class="active">
-        <img src="./images/web image2.webp" alt="Web Development Project 2">
-        <img src="./images/web image3.webp" alt="Web Development Project 3">
-        <img src="./images/web image4.webp" alt="">
-      </div>
-      <div class="page-service-text">
-        <h2>Web Development</h2>
-        <p>Modern, responsive websites built for performance, user experience, and your business goals. We turn your ideas into digital reality.</p>
-        <ul>
-          <li>Business Websites</li>
-          <li>Landing Pages</li>
-          <li>eCommerce Solutions</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- Branding Section -->
-  <section class="page-service-section page-branding">
-    <div class="page-service-content reverse">
-      <div class="page-service-image-showcase" data-images="branding">
-        <img src="./images/custom-high-quality-branded-cotton-face-towel-customized-embroidered-face-towel-print-in-lagos-nigeria.jfif" alt="Branding Project" class="active">
-        <img src="./images/Custom Gazebo Canopy Tent.jpg" alt="Branding Project 2">
-        <img src="./images/clothing hand tag.jfif" alt="">
-        <img src="./images/Custom Cork bottom Coffee mug.jfif" alt="">
-        <img src="./images/custom-backlit-illuminated-signage-outdoor-office-company-logo-business-illuminated-signage-with-light-in-lagos-nigeria.jfif" alt="">
-        <img src="./images/Logo Branded Polo T-Shirt.jfif" alt="">
-        <img src="./images/Car Branding.jpg" alt="Branding Project 3">
-      </div>
-      <div class="page-service-text">
-        <h2>Branding</h2>
-        <p>We craft memorable brands, from strategy and messaging to visual identity and guidelines. Make your business unforgettable.</p>
-        <ul>
-          <li>Custom Pen</li>
-          <li>Company Profile</li>
-          <li>Brand Guidelines</li>
-          <li>T-Shirt & Embroidery</li>
-          <li>Car Branding</li>
-          <li>Box Branding</li>
-          <li>illumibated signage</li>
-          <li>face towel....etc</li>
-        </ul>
-      </div>    
-    </div>
-  </section>
+    <section class="awesome-offerings">
+        <div class="container">
+            <div class="section-header">
+                <p class="sub-title">~ Our Awesome Services ~</p>
+                <h2>We Are Dedicated To Serve You All Time.</h2>
+            </div>
 
-  <!-- Logo Design Section -->
-  <section class="page-service-section page-logo">
-    <div class="page-service-content">
-      <div class="page-service-image-showcase" data-images="logo">
-        <img src="./images/WhatsApp Image 2025-09-24 at 2.48.42 PM.jpeg " alt="Logo Design Project" class="active">
-        <img src="./images/WhatsApp Image 2025-09-24 at 2.49.17 PM.jpeg " alt="Logo Design Project 2">
-        <img src="./images/WhatsApp Image 2025-09-24 at 2.49.48 PM.jpeg " alt="Logo Design Project 3">
-      </div>
-      <div class="page-service-text">
-        <h2>Logo Design</h2>
-        <p>Unique, professional logos that capture your brand’s essence and make a lasting impression everywhere your business appears.</p>
-        <ul>
-          <li>Custom Logo Concepts</li>
-          <li>Logo Redesign</li>
-          <li>Brand Marks & Icons</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <div class="service-cards-container">
+                <div class="service-card">
+                    <div class="icon-circle web-dev-bg">
+                        <i class="fas fa-code"></i> </div>
+                    <h3>Web Development</h3>
+                    <p>Building functional, secure, and visually appealing websites tailored to your business needs.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
 
-  <!-- Flyers Design Section -->
-  <section class="page-service-section page-flyers">
-    <div class="page-service-content reverse">
-      <div class="page-service-image-showcase" data-images="flyers">
-        <img src="./images/A5 Invoice&Receipt Booklet.jfif" alt="Flyers Design Project" class="active">
-        <img src="./images/Custom Business Card.jfif" alt="Flyers Design Project 2">
-        <img src="./images/Custom PVC Bunting Flag.jfif" alt="Flyers Design Project 3">
-        <img src="./images/Custom Table Tag Reservation Card.jfif" alt="">
-        <img src="./images/Portrait Event Menu Card.jpg" alt="">
-        <img src="./images/Product Label Sticker.jfif" alt="">
-        <img src="./images/Wedding Programme (Magazine Size).jpg" alt="">
-        <img src="./images/Square Burial.jpg" alt="">
-      </div>
-      <div class="page-service-text">
-        <h2>Flyers Design</h2>
-        <p>Eye-catching flyers and promotional materials designed to engage, inform, and convert your audience both online and offline.</p>
-        <ul>
-          <li>A5 Invoice&Recipt Booklet</li>
-          <li>Custom Business Card</li>
-          <li>Custom PVC Bunting Flag</li>
-          <li>Produt Label Sticker</li>
-          <li>Portait Event Menu Card</li>
-          <li>Custom Table Tag Reservation Card</li>
-          <li>Wedding Programme (Magazine Size)....etc</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+                <div class="service-card">
+                    <div class="icon-circle web-mgmt-bg">
+                        <i class="fas fa-tasks"></i> </div>
+                    <h3>Web Management</h3>
+                    <p>Maintaining, updating, and ensuring peak performance of your online presence 24/7.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
 
-  <!-- Copywriting Section -->
-  <section class="page-service-section page-copywriting">
-    <div class="page-service-content">
-      <div class="page-service-image-showcase" data-images="copywriting">
-        <img src="./images/cop1.webp" alt="Copywriting Project" class="active">
-        <img src="./images/cop3.webp" alt="Copywriting Project 2">
-        <img src="./images/cop2.png" alt="Copywriting Project 3">
-      </div>
-      <div class="page-service-text">
-        <h2>Copywriting</h2>
-        <p>Persuasive, creative copy for websites, ads, and campaigns that connects with your audience and drives action.</p>
-        <ul>
-          <li>Website Content</li>
-          <li>Ad Copy</li>
-          <li>Product Descriptions</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+                <div class="service-card">
+                    <div class="icon-circle logo-bg">
+                        <i class="fas fa-pen-nib"></i> </div>
+                    <h3>Logo Design</h3>
+                    <p>Crafting unique and memorable symbols that perfectly represent your brand identity and values.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
 
-  <!-- Digital Marketing Section -->
-  <section class="page-service-section page-digital-marketing">
-    <div class="page-service-content reverse">
-      <div class="page-service-image-showcase" data-images="digitalmarketing">
-        <img src="./images/dig1.jfif" alt="Digital Marketing Project" class="active">
-        <img src="./images/dig3.png" alt="Digital Marketing Project 2">
-        <img src="./images/dig2.jfif" alt="Digital Marketing Project 3">
-      </div>
-      <div class="page-service-text">
-        <h2>Digital Marketing</h2>
-        <p>Results-driven digital marketing strategies including SEO, social media, and online ads to grow your reach and boost sales.</p>
-        <ul>
-          <li>SEO Optimization</li>
-          <li>Social Media Campaigns</li>
-          <li>Online Advertising</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  
+                <div class="service-card">
+                    <div class="icon-circle branding-bg">
+                        <i class="fas fa-lightbulb"></i> </div>
+                    <h3>Branding</h3>
+                    <p>Developing your brand's voice, visuals, and market perception for cohesive business growth.</p>
+                    <a href="#" class="view-more-btn">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</section>
 
 
   <!-- Choose Us Section -->

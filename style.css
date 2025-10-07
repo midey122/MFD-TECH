@@ -460,22 +460,6 @@ body {
   }
 }
 
-/* Apply animation to service cards */
-.service-card {
-  opacity: 0;
-  animation: slideBounce 1s ease forwards;
-}
-
-/* Stagger animation */
-.service-card:nth-child(1) { animation-delay: 0.2s; }
-.service-card:nth-child(2) { animation-delay: 0.4s; }
-.service-card:nth-child(3) { animation-delay: 0.6s; }
-.service-card:nth-child(4) { animation-delay: 0.8s; }
-.service-card:nth-child(5) { animation-delay: 1s; }
-
-.service-card.animate {
-  animation: slideBounce 1s ease forwards;
-}
 
 @media (max-width: 1024px) {
   .navbar {
@@ -1642,139 +1626,9 @@ h2 {
   opacity: 0.95;
 }
 
-.page-service-section {
-  max-width: 1100px;
-  margin: 3rem auto 3rem auto;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  overflow: visible;
-  padding: 0;
-  border-top: 0;
-  border-bottom: 2px solid #eaf1fb;
-  transition: none;
-}
-.page-service-section:last-child {
-  border-bottom: none;
-}
-.page-service-content {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 0;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  margin: 0;
-}
-.page-service-content.reverse {
-  flex-direction: row-reverse;
-}
-.page-service-image-showcase {
-  min-width: 220px;
-  max-width: 420px;
-  background: #eaf1fb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 18px;
-  margin: 2rem;
-  box-shadow: 0 2px 12px rgba(0,74,173,0.07);
-}
-.page-service-image-showcase img {
-  width: 100%;
-  object-fit: cover;
-  min-height: 220px;
-  max-height: 260px;
-  display: block;
-  border: none;
-  border-radius: 18px;
-}
 
-.page-service-text {
-  flex: 2 1 400px;
-  padding: 2.5rem 2.5rem 2.5rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: none;
-}
-.page-service-text h2 {
-  font-family: 'Inter', sans-serif;
-  margin: 0 0 0.6rem 0;
-  font-size: 2rem;
-  color: #03224b;
-  letter-spacing: 1px;
-}
-.page-service-text p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1.13rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-.page-service-text ul {
-  padding-left: 0.8rem;
-  margin: 0;
-  font-size: 1.05rem;
-}
-.page-service-text ul li {
-  margin-bottom: 0.5rem;
-  list-style: none;
-  position: relative;
-  padding-left: 1.5rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-}
 
-.page-service-text ul li::before {
-  content: '\2666';
-  position: absolute;
-  left: 0;
-  top: 0.4rem;
-  color: black;
-  font-size: 1rem;
-  line-height: 1;
-}
 
-/* Unique color accents for each section */
-.page-web-dev .page-service-text h2 { color: black; }
-.page-branding .page-service-text h2 { color: black; }
-.page-logo .page-service-text h2 { color: black; }
-.page-flyers .page-service-text h2 { color: black }
-.page-copywriting .page-service-text h2 { color: black; }
-.page-digital-marketing .page-service-text h2 { color: black; }
-
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  .page-service-content,
-  .page-service-content.reverse {
-    flex-direction: column;
-  }
-  .page-service-image-showcase {
-    max-width: 100%;
-    margin: 1.2rem 1rem 0.5rem 1rem;
-    min-height: 180px;
-    max-height: 280px;
-  }
-  .page-service-text {
-    padding: 1.5rem 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .page-service-section {
-    margin: 1.2rem 0.2rem;
-  }
-  .page-service-text h2 {
-    font-size: 1.2rem;
-  }
-  .page-service-image-showcase img {
-    min-height: 120px;
-    max-height: 170px;
-  }
-}
 
 /* About Section */
 .about-section {
@@ -2164,4 +2018,222 @@ background-color: #f9f9f9;
     width: 35px;
     height: 35px;
   }
+}
+
+.skill-container {
+    /* Mimics the overall card background in the image */
+    /* background-color: white;
+      */
+    border-radius: 20px;
+    padding: 40px; /* Default desktop padding */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    position: relative;
+    max-width: 900px;
+    width: 100%; /* Use 100% width, limited by max-width */
+    margin: 0 auto;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+.skill-title {
+    color: #333;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* The overall bar track (grey background) */
+.progress-bar-track {
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures the loading line stays inside the track */
+    margin-top: 5px;
+}
+
+/* The blue loading line */
+.progress-bar-line {
+    height: 100%;
+    background-color: #4a69ff; /* Bright blue color from the image */
+    width: 0; /* Start width at 0 for animation */
+    transition: width 1.5s ease-out; /* Animation duration and easing */
+    border-radius: 4px;
+}
+
+
+
+.skill-item-wrapper {
+    margin-bottom: 30px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .skill-container {
+        padding: 20px; /* Reduce padding on tablets/mobiles */
+        border-radius: 15px; /* Slightly smaller rounded corners */
+    }
+    .skill-title {
+        font-size: 1.25rem; /* Smaller title on mobile */
+        margin-bottom: 30px;
+    }
+    /* The Tailwind class 'md:grid-cols-2' already handles the shift 
+      from 2 columns to 1 column below 768px, which is good. */
+}
+
+
+        
+        /* General container and section reset */
+.awesome-offerings {
+    background-color: white; 
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A slightly more modern font */
+    box-sizing: border-box; 
+    color: #333; /* Default text color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header Styling */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    color: #007bff; /* Use a primary color for the sub-title */
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.section-header h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 0;
+}
+
+/* Service Cards Layout */
+.service-cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Individual Service Card Style - Unique & Simple */
+.service-card {
+    flex: 1 1 250px; 
+    max-width: 250px;
+    background-color: white; 
+    color: #333; 
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee; /* Simple, subtle border instead of shadow */
+    text-align: center;
+    /* Ensure stability */
+    /* transition: background-color 0.0s, border-color 0.0s;  */
+}
+
+/* Ensure card stays visible and stable on hover */
+.service-card:hover {
+    background-color: white; /* Explicitly keep background white */
+    border-color: #007bff; /* Simple visual feedback on hover */
+    /* If you still see flickering, add this: */
+    /* z-index: 10; */
+}
+
+
+.service-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.service-card p {
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Icon Styling - Unique & Simple */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    background-color: white; /* Background is white */
+    border: 2px solid; /* Use the color in the border */
+}
+.icon-circle i {
+    color: inherit; /* Inherit color from the specific class for the icon itself */
+}
+
+
+/* Specific Icon Colors - Define primary color and border color */
+.web-dev-bg { border-color: #28a745; color: #28a745; } 
+.web-mgmt-bg { border-color: #007bff; color: #007bff; } 
+.logo-bg { border-color: #dc3545; color: #dc3545; }    
+.branding-bg { border-color: #6f42c1; color: #6f42c1; } 
+
+/* Button Styling - Simple */
+.view-more-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: transparent;
+    color: #333; 
+    border: 1px solid #ccc; /* Lighter border */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    /* Ensure stability */
+    /* transition: background-color 0.0s, color 0.0s;  */
+}
+
+.view-more-btn:hover {
+    background-color: #007bff;
+    color: white; 
+    border: 1px solid #007bff;
+}
+
+/* ------------------------------------------- */
+/* MEDIA QUERIES (Responsiveness remains the same) */
+/* ------------------------------------------- */
+
+/* Medium Screens (Tablets, 992px and up) - Two-column layout */
+@media (max-width: 992px) {
+    .service-card {
+        flex: 1 1 calc(50% - 15px); 
+        max-width: calc(50% - 15px);
+    }
+}
+
+/* Small Screens (Mobile Phones, 576px and up) - Single-column layout */
+@media (max-width: 576px) {
+    .awesome-offerings {
+        padding: 40px 15px; 
+    }
+
+    .section-header h2 {
+        font-size: 1.8em; 
+    }
+
+    .service-card {
+        flex: 1 1 100%; 
+        max-width: 100%;
+        margin-bottom: 15px; 
+    }
 }
